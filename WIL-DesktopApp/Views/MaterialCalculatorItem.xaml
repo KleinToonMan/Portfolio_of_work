@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="WIL_DesktopApp.Views.MaterialCalculatorItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WIL_DesktopApp.Views"
+             xmlns:viewmodels="clr-namespace:WIL_DesktopApp.ViewModels"
+             mc:Ignorable="d" Background="#F7F7F7" >
+
+    <Grid Margin="15">
+        <Border Background="White" CornerRadius="10" Padding="15">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                <ComboBox x:Name="MatCombo" ItemsSource="{Binding GetMatNames}" Width="120" Height="33" SelectionChanged="MatCombo_SelectionChanged" Background="#E0E0E0" Margin="0 0 10 0"  VerticalContentAlignment="Center"/>
+
+                <Label x:Name="qtyLabel" Content="Enter Value 1" Foreground="#A0A0A0" VerticalAlignment="Center" Visibility="Visible"  VerticalContentAlignment="Center"/>
+                <TextBox x:Name="qtyTxt" Width="65" Height="33" TextChanged="QtyTxt_TextChanged" Background="#E0E0E0" BorderThickness="0" Margin="0 0 10 0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                
+                <Label x:Name="unitLabel" Content="Enter Value 2" Foreground="#A0A0A0" VerticalAlignment="Center" Visibility="Visible" VerticalContentAlignment="Center"/>
+                <TextBox x:Name="unitTxt" Width="65" Height="33" TextChanged="UnitTxt_TextChanged" Background="#E0E0E0" BorderThickness="0" Margin="0 0 10 0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+
+                <Label x:Name="value3Label" Content="Enter Value 3" Foreground="#A0A0A0" VerticalAlignment="Center" Visibility="Visible" VerticalContentAlignment="Center"/>
+                <TextBox x:Name="value3Txt" Width="65" Height="33" TextChanged="value3_TextChanged" Background="#E0E0E0" BorderThickness="0" Margin="0 0 10 0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+
+
+                <Label Content="R" FontSize="14" FontWeight="Bold" VerticalAlignment="Center"/>
+                <Label x:Name="priceVal" Content="0" FontSize="14" FontWeight="Bold" VerticalAlignment="Center"/>
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

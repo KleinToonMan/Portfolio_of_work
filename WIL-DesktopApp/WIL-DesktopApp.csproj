@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>WIL_DesktopApp</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Krypton-Logo2 icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\KryptonLogo-Dark.png" />
+    <None Remove="Images\KryptonLogo-Light.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Krypton-Logo2 icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Core" Version="1.6.0" />
+    <PackageReference Include="iTextSharp" Version="5.5.13.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MySql.EntityFrameworkCore" Version="7.0.5" />
+    <PackageReference Include="MySqlConnector" Version="2.2.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\KryptonLogo-Light.png" />
+    <Resource Include="Images\KryptonLogo-Dark.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\AttributeServices\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,14 @@
+﻿<Window x:Class="WIL_DesktopApp.Views.FinalQuote"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WIL_DesktopApp.Views"
+        mc:Ignorable="d"
+        Title="FinalQuote" Height="450" Width="800">
+    <Grid>
+        <Button Margin="30,324,0,30" HorizontalAlignment="Left" Content="Back" Padding="0" Background="#FF2FCBFF" Foreground="White" FontFamily="Segoe UI" BorderThickness="0" FontSize="14" Click="GoBack" Width="188"/>
+        <Button Margin="0,318,30,36" HorizontalAlignment="Right" Content="ContactClient" Padding="0" Background="#FF2FCBFF" Foreground="White" FontFamily="Segoe UI" BorderThickness="0" FontSize="14" Click="ContactClient" Width="188"/>
+        <Label Content="Quote added to pastel" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"/>
+    </Grid>
+</Window>

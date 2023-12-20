@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="WIL_DesktopApp.Views.UserEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WIL_DesktopApp.Views" xmlns:viewModel="clr-namespace:WIL_DesktopApp.ViewModels"
+             mc:Ignorable="d"
+          Background="AliceBlue">
+    <UserControl.DataContext>
+        <viewModel:UserEditorViewModel></viewModel:UserEditorViewModel>
+    </UserControl.DataContext>
+    <Grid>
+
+
+
+        <DataGrid x:Name="testData" ItemsSource="{Binding GetUsers}" IsReadOnly="True" CanUserResizeColumns="True" HorizontalAlignment="Center" 
+          VerticalAlignment="Top" Margin="50" GridLinesVisibility="All" BorderThickness="3"
+          SelectedIndex="{Binding UserIndex, UpdateSourceTrigger=PropertyChanged}" CanUserSortColumns="False"
+          AutoGenerateColumns="True" Background="#000" Foreground="#000" FontSize="28" RowBackground="#FFB6EDFF">
+            <DataGrid.Resources>
+                <!-- Style for DataGrid Cells -->
+                <Style TargetType="{x:Type DataGridCell}">
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="Padding" Value="15"/>
+                    <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+
+
+        <Button x:Name="BackButton" Content="Back" Command="{Binding BackCommand}" Width="150" Height=" 40" HorizontalAlignment="Left" Margin="80,0,0,0">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#FF2FCAFE"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="BorderBrush" Value="#FF2FCAFE"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="Padding" Value="10"/>
+                    <Setter Property="FontFamily" Value="Segoe UI"/>
+                    <Setter Property="FontSize" Value="16"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FF0099E0"/>
+                            <Setter Property="BorderBrush" Value="#FF0099E0"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#FF0072B5"/>
+                            <Setter Property="BorderBrush" Value="#FF0072B5"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="btnEditUsr" Content="Edit User" Command="{Binding UserIndexCommand}" Width="150" Height=" 40" HorizontalAlignment="Right" Margin="0,0,80,0">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#FF2FCAFE"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="BorderBrush" Value="#FF2FCAFE"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="Padding" Value="10"/>
+                    <Setter Property="FontFamily" Value="Segoe UI"/>
+                    <Setter Property="FontSize" Value="16"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FF0099E0"/>
+                            <Setter Property="BorderBrush" Value="#FF0099E0"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#FF0072B5"/>
+                            <Setter Property="BorderBrush" Value="#FF0072B5"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</UserControl>

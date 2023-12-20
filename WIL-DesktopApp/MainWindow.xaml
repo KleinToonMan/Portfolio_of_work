@@ -1,0 +1,14 @@
+﻿<Window x:Class="WIL_DesktopApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WIL_DesktopApp"
+        mc:Ignorable="d"
+        Title="Krypton Signs Desktop" MinHeight="450" MinWidth="1024" Height="auto" Width="auto">
+
+
+    <Grid x:Name="NavigationContainer">
+        
+    </Grid>
+</Window>
